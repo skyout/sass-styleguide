@@ -29,7 +29,7 @@ SASS should be developed using the `SASS` indentation only style not the SCSS br
 
 ### Spacing and Indentation
 
-Indentation should be **four spaces**. If using tabs in a code editor, ensure that the tab are set to four spaces. Each selector should have at least one line break above. Properties should immediately follow the selector without a line break.
+Indentation should be **four spaces**. If using tabs in a code editor, ensure that the tab are set to four spaces. Each selector should have at least one line break above. Properties should immediately follow the selector without a line break. Remove any trailing whitespaces. Trailing whitespaces are unnecessary and can complicate diffs.
 
 **Good**
 ```
@@ -52,10 +52,9 @@ h2
   margin-bottom: 20px
 ```
 
-
 ### Sorting Properties
 
-All properties should be ordered alphabetically to enable easy lookup. Any includes should go at the top of the propertly list, directly below the selector. Multiple includes should also be ordered alphabetically. 
+All properties should be on their own line. Properties should be ordered alphabetically to enable easy lookup. Any includes should go at the top of the propertly list, directly below the selector. Multiple includes should also be ordered alphabetically. 
 
 **Good**
 ```
@@ -73,6 +72,39 @@ h1
     @include clear
     width: 200px
     color: #000
+```
+
+
+### Chaining
+
+When possible, if multiple methods have the same styles or very similar styles then chain them together using commas. If two selectors have very similar styles with one or two differences, then chain them together with the first selector's styles, then after set the minor changes to the second selector. 
+
+
+**Good**
+```
+ol, ul
+    color: #000
+    line-height: 1.5
+    list-style: none outside none
+    padding: 0
+    
+ul
+    color: #666
+```
+
+**Bad**
+```
+ol
+    color: #000
+    line-height: 1.5
+    list-style: none outside none
+    padding: 0
+
+ul
+    color: #666
+    line-height: 1.5
+    list-style: none outside none
+    padding: 0
 ```
 
 
@@ -107,7 +139,7 @@ body
 ```
     
     
-Classes, IDs, pseduo-classes, and other modifiers should nest inside their selector to maintain readability. The same rules with a line break above apply to these modifiers. 
+Classes, pseduo-classes, and other modifiers should nest inside their selector to maintain readability. The same rules with a line break above apply to these modifiers. 
 
 **Good**
 ```
@@ -130,37 +162,85 @@ h1
         padding-top: 0
 ```
 
-### Chaining
 
-When possible, if multiple methods have the same styles or very similar styles then chain them together using commas. If two selectors have very similar styles with one or two differences, then chain them together with the first selector's styles, then after set the minor changes to the second selector. 
 
+
+Naming
+------
+
+
+### Case
+
+**Use only lowercase**. This applies to selectors, properties, and property values. 
 
 **Good**
 ```
-ol, ul
+ul
     color: #000
     line-height: 1.5
-    list-style: none outside none
-    padding: 0
     
-ul
-    color: #666
+    &:first-child
+        padding-top: 20px
 ```
 
 **Bad**
 ```
-ol
-    color: #000
+UL
+    color: #EEEEEE
     line-height: 1.5
-    list-style: none outside none
-    padding: 0
-
-ul
-    color: #666
-    line-height: 1.5
-    list-style: none outside none
-    padding: 0
+    
+    &:FIRST-CHILD
+        padding-top: 20px
 ```
+
+
+### IDs and Classes
+Use meaningful or generic ID and class names. Instead of presentational or cryptic names, always use ID and class names that reflect the purpose of the element in question, or that are otherwise generic. Names that are specific and reflect the purpose of the element should be preferred as these are most understandable and the least likely to change. Generic names are simply a fallback for elements that have no particular or no meaning different from their siblings. They are typically needed as “helpers”. Using functional or generic names reduces the probability of unnecessary document or template changes.
+
+**Good**
+```
+// specific
+.gallery {}
+.login {}
+.video {}
+
+// generic
+.aux {}
+.alt {}
+```
+
+**Bad**
+```
+// meaningless
+#yee-1901 {}
+
+// presentational
+.button-green {}
+.clear {}
+```
+
+Use ID and class names that are as short as possible but as long as necessary. Try to convey what an ID or class is about while being as brief as possible. Using ID and class names this way contributes to acceptable levels of understandability and code efficiency.
+
+
+**Good**
+```
+#nav {}
+.author {}
+```
+
+**Bad**
+```
+//too long
+#navigation {}
+
+// not descriptive enough
+.atr {}
+```
+
+
+
+
+
     
 
     
