@@ -271,8 +271,7 @@ input[type="search"]
 
 ### Case
 
-**Use only lowercase**. This applies to selectors, properties, and property values. The only exception is if there needs to be a font or other name that must contain uppercase characters. 
-
+**Use only lowercase**. This applies to selectors, properties, and property values. 
 
 ```sass
 // bad
@@ -425,9 +424,20 @@ Mixins are declared using the `@mixin` declaration. Mixins should be housed in a
 
 ### Fonts
 
-If outside font files are needed, then a separate font file should be created and named `_fonts.scss`. 
+If outside font files are needed, then a separate font file should be created and named `_fonts.scss`. Due some syntax issues, SCSS is acceptable for declaring fonts via `@font-face`. The values assigned in the font-family should be lower case only, dashes if necessary, and then set to a variable in the `_variables.sass` files
 
-
+```
+// proxima nova light
+@font-face
+    font-family: 'proxima-nova-light';
+    src: url('/assets/css/fonts/ProximaNovaLight/ProximaNova-Light-webfont.eot');
+    src: url('/assets/css/fonts/ProximaNovaLight/ProximaNova-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/css/fonts/ProximaNovaLight/ProximaNova-Light-webfont.woff') format('woff'),
+         url('/assets/css/fonts/ProximaNovaLight/ProximaNova-Light-webfont.ttf') format('truetype'),
+         url('/assets/css/fonts/ProximaNovaLight/ProximaNova-Light-webfont.svg#proxima_nova_ltlight') format('svg')
+    font-weight: normal
+    font-style: normal
+``
 
 
 <a name="variables">Variables</a>
