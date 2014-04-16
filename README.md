@@ -68,8 +68,6 @@ $successGreen: #98fe98
 // brand colors
 $primaryGreen: #00853e
 $secondaryBlue: #008fc5
-
-
 ```
 
 **Bad**
