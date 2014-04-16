@@ -29,7 +29,7 @@ SASS should be developed using the `SASS` indentation only style not the SCSS br
 
 ### Spacing and Indentation
 
-Indentation should be **four spaces**, if using tabs ensure that the tab settings is set to four spaces. Each selector should have at least one line break above. Properties should immediately follow the selector without a line break.
+Indentation should be **four spaces**. If using tabs in a code editor, ensure that the tab are set to four spaces. Each selector should have at least one line break above. Properties should immediately follow the selector without a line break.
 
 **Good**
 ```
@@ -88,12 +88,10 @@ Nesting should only be used when absolutely necessary. Direct descendents also s
 body
     border-top: 1px solid #000
     
-// main wrapper
 article
     background: #ccc
     padding: 0
     
-// main header style
 h1
     color: #000
 ```
@@ -103,12 +101,10 @@ h1
 body
     border-top: 1px solid #000
     
-    // main wrapper
     > article
         background: #ccc
         padding: 0
         
-    // main header style
     h1
         color: #000
 ```
