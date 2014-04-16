@@ -268,18 +268,10 @@ Use meaningful or generic ID and class names. Instead of presentational or crypt
 **Good**
 ```
 // specific
-
-.gallery
-
-.login 
-
-.video 
+.gallery, .login, .video 
 
 // generic
-
-.aux
-
-.alt
+.aux, .alt
 ```
 
 **Bad**
@@ -288,26 +280,23 @@ Use meaningful or generic ID and class names. Instead of presentational or crypt
 #yee-1901
 
 // presentational
-.button-green
-
-.clear
+.button-green, .clear
 ```
 
 Use ID and class names that are as short as possible but as long as necessary. Try to convey what an ID or class is about while being as brief as possible. Using ID and class names this way contributes to acceptable levels of understandability and code efficiency.
 
 **Good**
 ```
-#nav {}
-.author {}
+#nav, .author
 ```
 
 **Bad**
 ```
 //too long
-#navigation {}
+#navigation
 
 // not descriptive enough
-.atr {}
+.atr
 ```
 
 ### Delimiters
@@ -316,9 +305,7 @@ Separate words in ID and class names by a hyphen. Do not concatenate words and a
 
 **Good**
 ```
-#video-id
-
-.error-message
+#video-id, .error-message
 ```
 
 **Bad**
