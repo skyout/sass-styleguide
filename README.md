@@ -11,6 +11,7 @@ Table of Contents
 3. Naming
 4. Mixins
 5. Variables
+6. Comments
 
 
 
@@ -297,9 +298,7 @@ Use meaningful or generic ID and class names. Instead of presentational or crypt
 .aux, .alt
 ```
 
-
-
-Use ID and class names that are as short as possible but as long as necessary. Try to convey what an ID or class is about while being as brief as possible. Using ID and class names this way contributes to acceptable levels of understandability and code efficiency.
+Use ID and class names that are as short as possible but as long as necessary. Try to convey what an ID or class is about while being as brief as possible. Using ID and class names this way contributes to acceptable levels of understandability and code efficiency. Unless necessary, do not use element names in conjunction with IDs.
 
 
 **Bad**
@@ -315,8 +314,6 @@ Use ID and class names that are as short as possible but as long as necessary. T
 ```
 #nav, .author
 ```
-
-
 
 ### Delimiters
 
@@ -336,20 +333,6 @@ Separate words in ID and class names by a hyphen. Do not concatenate words and a
 ```
 #video-id, .error-message
 ```
-
-
-
-
-
-
-
-
-
-
-    
-
-    
-    
 
 Imports and Charset
 ------------------
@@ -469,6 +452,10 @@ $promixaRegular: "ProximaNovaRegular", sans-serif
 
 Each project should have default variables that are associated with it. These include the following: `font-size`, `font-family`, `line-height`. These values should be set to the body in the global stylesheet. 
 
+```
+body
+    font: normal #{$font-size}/#{$line-height} $regular
+```
 
 ### Manipulation
 
@@ -489,3 +476,8 @@ p
 ```
 
 
+Comments
+--------
+Well commented code is extremely important. Take time to describe components, how they work, their limitations, and the way they are constructed. Don't leave others in the team guessing as to the purpose of uncommon or non-obvious code.
+
+Comment style should be simple and consistent within a single code base.
