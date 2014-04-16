@@ -271,7 +271,7 @@ input[type="search"]
 
 ### Case
 
-**Use only lowercase**. This applies to selectors, properties, and property values. 
+**Use only lowercase**. This applies to selectors, properties, and property values. The only exception is if there needs to be a font or other name that must contain uppercase characters. 
 
 
 ```sass
