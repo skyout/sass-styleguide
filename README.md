@@ -30,7 +30,7 @@ SASS should be developed using the `SASS` indentation only style not the SCSS br
 
 ### Spacing and Indentation
 
-Indentation should be **four spaces**. If using tabs in a code editor, ensure that the tab are set to four spaces. Each selector should have at least one line break above. Properties should immediately follow the selector without a line break. Remove any trailing whitespaces. Trailing whitespaces are unnecessary and can complicate diffs.
+Indentation should be **four spaces**. If using tabs in a code editor, ensure that the tab are set to four spaces. Each selector should have at least one line break above. This helps to separate selectors and ideas. Properties should immediately follow the selector without a line break, which will aide in putting context to the properties. Remove any trailing whitespaces. Trailing whitespaces are unnecessary and can complicate diffs.
 
 **Good**
 ```
@@ -163,6 +163,73 @@ h1
         padding-top: 0
 ```
 
+### Shorthand Properties
+
+CSS offers a variety of shorthand properties (like font) that should be used whenever possible, even in cases where only one value is explicitly set. Using shorthand properties is useful for code efficiency and understandability.
+
+
+**Good**
+```
+body
+    font: normal 14px/1.5 Arial, Helvetica, sans-serif
+```
+**Bad**
+```
+body
+    font-family: Arial, Helvetica, sans-serif
+    font-size: 14px
+    font-style: italic
+    font-weight: normal
+    line-height: 1.5
+
+```
+
+### Shorthand Values
+
+Omit unit specification after “0” values unless they are required. For color values that permit it, 3 character hexadecimal notation is shorter and more succinct. As a general rule, if a unit specification isn't required, then don't use it. 
+
+**Good**
+```
+p
+    color: #000
+    padding: 0
+    line-height: 1.5
+```
+
+**Bad**
+```
+p
+    color: #000000
+    padding: 0px
+    line-height: 1.5em
+```
+
+
+### Quotation marks
+
+Use double (") rather than single (') quotation marks for attribute selectors or property values. Also don’t forget to quote attribute values in selectors.
+
+**Good**
+```
+html
+  background: #fff url("img/bg.png") repeat 0 0
+  font-family: "open sans", arial, sans-serif
+
+input[type="search"]
+  margin-left: 1em
+```
+
+**Bad**
+```
+html
+    background: #fff url('img/bg.png') repeat 0 0
+    font-family: 'open sans', arial, sans-serif
+
+input[type=search]
+    margin-left: 1em
+```
+
+
 
 
 
@@ -201,27 +268,32 @@ Use meaningful or generic ID and class names. Instead of presentational or crypt
 **Good**
 ```
 // specific
-.gallery {}
-.login {}
-.video {}
+
+.gallery
+
+.login 
+
+.video 
 
 // generic
-.aux {}
-.alt {}
+
+.aux
+
+.alt
 ```
 
 **Bad**
 ```
 // meaningless
-#yee-1901 {}
+#yee-1901
 
 // presentational
-.button-green {}
-.clear {}
+.button-green
+
+.clear
 ```
 
 Use ID and class names that are as short as possible but as long as necessary. Try to convey what an ID or class is about while being as brief as possible. Using ID and class names this way contributes to acceptable levels of understandability and code efficiency.
-
 
 **Good**
 ```
@@ -237,6 +309,29 @@ Use ID and class names that are as short as possible but as long as necessary. T
 // not descriptive enough
 .atr {}
 ```
+
+### Delimiters
+
+Separate words in ID and class names by a hyphen. Do not concatenate words and abbreviations in selectors by any characters (including none at all) other than hyphens, in order to improve understanding and scannability.
+
+**Good**
+```
+#video-id
+
+.error-message
+```
+
+**Bad**
+```
+// not readble
+#videoid
+
+// camel instead of hypen
+.errorMessage
+```
+
+
+
 
 
 
