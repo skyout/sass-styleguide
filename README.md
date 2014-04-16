@@ -8,8 +8,8 @@ Table of Contents
     
 1. General Principles
 2. Formatting
-2. Mixins
-3. Variables
+3. Mixins
+4. Variables
 
 
 
@@ -22,16 +22,14 @@ General Principles
 
 The point of having style guidelines is to have a common vocabulary of coding so people can concentrate on what you’re saying rather than on how you’re saying it. If code you add to a file looks drastically different from the existing code around it, it throws readers out of their rhythm when they go to read it. Avoid this.
 
-Formatting
+General Formatting
 ----------
 
 SASS should be developed using the `SASS` indentation only style not the SCSS bracket based style. 
 
 ### Spacing and Indentation
 
-* Indentation should be **four spaces**. 
-* Each selector should have at least one line break above.
-* Properties should immediately follow the selector with out line break
+Indentation should be **four spaces**, if using tabs ensure that the tab settings is set to four spaces. Each selector should have at least one line break above. Properties should immediately follow the selector without a line break.
 
 **Good**
 ```
@@ -116,7 +114,7 @@ body
 ```
     
     
-Classes, IDs, pseduo-classes, and other modifiers should nested in their selector to maintain readability. The same rules with a line break above apply to these modifiers. 
+Classes, IDs, pseduo-classes, and other modifiers should nest inside their selector to maintain readability. The same rules with a line break above apply to these modifiers. 
 
 **Good**
 ```
@@ -165,7 +163,7 @@ ol
     padding: 0
 
 ul
-    color: #66
+    color: #666
     line-height: 1.5
     list-style: none outside none
     padding: 0
