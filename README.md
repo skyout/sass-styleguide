@@ -426,7 +426,7 @@ Mixins are declared using the `@mixin` declaration. Mixins should be housed in a
 
 If outside font files are needed, then a separate font file should be created and named `_fonts.scss`. Due some syntax issues, SCSS is acceptable for declaring fonts via `@font-face`. The values assigned in the font-family should be lower case only, dashes if necessary, and then set to a variable in the `_variables.sass` files
 
-```
+```sass
 // proxima nova light
 @font-face
     font-family: 'proxima-nova-light';
@@ -437,7 +437,7 @@ If outside font files are needed, then a separate font file should be created an
          url('/assets/css/fonts/ProximaNovaLight/ProximaNova-Light-webfont.svg#proxima_nova_ltlight') format('svg')
     font-weight: normal
     font-style: normal
-``
+```
 
 
 <a name="variables">Variables</a>
