@@ -6,14 +6,14 @@ Grasshopper SASS Style Guide
 Table of Contents
 -----------------
     
-1. Consistency
+1. General Principles
 2. Formatting
 2. Mixins
 3. Variables
 
 
 
-Consistency
+General Principles
 -----------
 
 ### Consistency
@@ -22,11 +22,37 @@ Consistency
 
 The point of having style guidelines is to have a common vocabulary of coding so people can concentrate on what you’re saying rather than on how you’re saying it. If code you add to a file looks drastically different from the existing code around it, it throws readers out of their rhythm when they go to read it. Avoid this.
 
-Formatting
-----------
+### Formatting
 
 SASS should be developed using the `SASS` indentation only style not the `SCSS` bracket based style. 
 
+
+### Spacing and Indentation
+
+* Indentation should be **four spaces**. 
+* Each selector should have at least one line break above the previous selector and rules
+
+**Good**
+```
+h1
+    margin: 0
+    padding: 0
+    
+    
+h2
+    color: #846383
+    margin-bottom: 20px
+```
+
+**Bad**
+```
+h1
+  padding: 0
+  margin: 0
+h2
+  color: #846383
+  margin-bottom: 20px
+```
 
 
 Imports and Charset
