@@ -22,15 +22,16 @@ General Principles
 
 The point of having style guidelines is to have a common vocabulary of coding so people can concentrate on what you’re saying rather than on how you’re saying it. If code you add to a file looks drastically different from the existing code around it, it throws readers out of their rhythm when they go to read it. Avoid this.
 
-### Formatting
+Formatting
+----------
 
-SASS should be developed using the `SASS` indentation only style not the `SCSS` bracket based style. 
-
+SASS should be developed using the `SASS` indentation only style not the SCSS bracket based style. 
 
 ### Spacing and Indentation
 
 * Indentation should be **four spaces**. 
-* Each selector should have at least one line break above the previous selector and rules
+* Each selector should have at least one line break above.
+* Properties should immediately follow the selector with out line break
 
 **Good**
 ```
@@ -47,12 +48,40 @@ h2
 **Bad**
 ```
 h1
+
   padding: 0
   margin: 0
 h2
+
   color: #846383
   margin-bottom: 20px
 ```
+
+
+### Sorting Properties
+
+All properties should be ordered alphabetically to enable easy lookup. Any includes should go at the top of the propertly list, directly below the selector. Multiple includes should also be ordered alphabetically. 
+
+**Good**
+```
+h1
+    @include clear
+    color: #000
+    padding: 5px
+    width: 200px
+```
+
+**Bad**
+```
+h1
+    padding: 5px
+    @include clear
+    width: 200px
+    color: #000
+```
+
+
+### Nesting
 
 
 Imports and Charset
