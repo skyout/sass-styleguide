@@ -457,13 +457,12 @@ Variables are declared using the `$` notation. Mixins should be housed in a file
 ```sass
 // bad
 
-// colors and fonts
 $red: #ea5b54
 $green: #98fe98
 $primary: #00853e
 $secondary: #008fc5
-$bold: "ProximaNovaBold", sans-serif
-$regular: "ProximaNovaRegular", sans-serif
+$bold: "proxima-nova-bold", sans-serif
+$regular: "proxima-nova-regular", sans-serif
 
 
 // good
@@ -477,8 +476,8 @@ $primary-green: #00853e
 $secondary-blue: #008fc5
 
 // fonts
-$proxima-bold: "ProximaNovaBold", sans-serif
-$promixa-regular: "ProximaNovaRegular", sans-serif
+$proxima-bold: "proxima-nova-bold", sans-serif
+$proxima-regular: "proxima-nova-regular", sans-serif
 ```
 
 ### Default Values
