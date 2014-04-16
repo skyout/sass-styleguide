@@ -1,7 +1,7 @@
 Grasshopper SASS Style Guide
 ============================
 
-*A guide to developing stylesheets in SASS*
+*A guide to developing extensible stylesheets in SASS*
 
 Table of Contents
 -----------------
@@ -85,16 +85,17 @@ h1
 
 Nesting should only be used when absolutely necessary. Direct descendents also should be used sparingly due to the performance hit that comes with their use. Nesting should be four spaces, and any selectors should have a line break before them.
 
-
 **Good**
 ```
 body
     border-top: 1px solid #000
     
+// main wrapper
 article
     background: #ccc
     padding: 0
     
+// main header style
 h1
     color: #000
 ```
@@ -104,21 +105,75 @@ h1
 body
     border-top: 1px solid #000
     
+    // main wrapper
     > article
         background: #ccc
         padding: 0
         
+    // main header style
     h1
         color: #000
 ```
     
     
+Classes, IDs, pseduo-classes, and other modifiers should nested in their selector to maintain readability. The same rules with a line break above apply to these modifiers. 
+
+**Good**
+```
+h1
+
+    &.green
+        color: #0085e3
+        
+    &:first-child
+        padding-top: 0
+        
+```
+
+**Bad**
+```
+    h1.green
+        color: #0085e3
+        
+    h1:first-child
+        padding-top: 0
+```
+
+### Chaining
+
+When possible, if multiple methods have the same styles or very similar styles then chain them together using commas. If two selectors have very similar styles with one or two differences, then chain them together with the first selector's styles, then after set the minor changes to the second selector. 
+
+
+**Good**
+```
+ol, ul
+    color: #000
+    line-height: 1.5
+    list-style: none outside none
+    padding: 0
+    
+ul
+    color: #666
+```
+
+**Bad**
+```
+ol
+    color: #000
+    line-height: 1.5
+    list-style: none outside none
+    padding: 0
+
+ul
+    color: #66
+    line-height: 1.5
+    list-style: none outside none
+    padding: 0
+```
     
 
     
-
-
-
+    
 
 Imports and Charset
 ------------------
