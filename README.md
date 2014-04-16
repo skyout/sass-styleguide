@@ -83,6 +83,42 @@ h1
 
 ### Nesting
 
+Nesting should only be used when absolutely necessary. Direct descendents also should be used sparingly due to the performance hit that comes with their use. Nesting should be four spaces, and any selectors should have a line break before them.
+
+
+**Good**
+```
+body
+    border-top: 1px solid #000
+    
+article
+    background: #ccc
+    padding: 0
+    
+h1
+    color: #000
+```
+
+**Bad**
+```
+body
+    border-top: 1px solid #000
+    
+    > article
+        background: #ccc
+        padding: 0
+        
+    h1
+        color: #000
+```
+    
+    
+    
+
+    
+
+
+
 
 Imports and Charset
 ------------------
