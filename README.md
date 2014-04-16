@@ -56,8 +56,12 @@ Mixins are declared using the `@mixin` declaration. Mixins are used for code tha
 Variables
 ---------
 
-Variables are declared using the `$` notation. Variables are used for common colors, fonts, and numbers throughout the stylesheets. When naming these files ensure that variables are not ambiguous and describe the value they hold. Like Variables should be grouped together to help with context and readability. Make sure to comment each variable or group to document the values. 
+Variables are declared using the `$` notation. Variables are used for common colors, fonts, and numbers used throughout the stylesheets. 
 
+* Variables should follow camel cased formatting
+* Ensure that variables are not ambiguous and describe the value they hold. 
+* Like Variables should be grouped together to help with context and readability.
+* Comment each variable or group to document the values. 
 
 **Good**
 
