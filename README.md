@@ -28,9 +28,9 @@ The point of having style guidelines is to have a common vocabulary of coding so
 Mixins
 ------
 
-Mixins are declared using the `@mixin` declaration. Mixins are used for code that is frequently repeated through the stylesheets, but may not necessarily correspond to a single element or class. 
+Mixins are declared using the `@mixin` declaration. Mixins should be housed in a file called `_mixins.sass`. Mixins are used for code that is frequently repeated through the stylesheets, but may not necessarily correspond to a single element or class. 
 
-* Mixins should be housed in a file called `_mixins.sass`.
+* Mixins should follow camel cased formatting
 * Mixins should be order alphabetically by their title for organization
 * If applicable, provide default settings in the mixin.
 
@@ -56,7 +56,7 @@ Mixins are declared using the `@mixin` declaration. Mixins are used for code tha
 Variables
 ---------
 
-Variables are declared using the `$` notation. Variables are used for common colors, fonts, and numbers used throughout the stylesheets. 
+Variables are declared using the `$` notation. Mixins should be housed in a file called `_variables.sass`. Variables are used for common colors, fonts, and numbers used throughout the stylesheets. 
 
 * Variables should follow camel cased formatting
 * Ensure that variables are not ambiguous and describe the value they hold. 
