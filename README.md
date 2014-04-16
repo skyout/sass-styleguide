@@ -37,7 +37,6 @@ h1
     margin: 0
     padding: 0
     
-    
 h2
     color: #846383
     margin-bottom: 20px
@@ -46,11 +45,9 @@ h2
 **Bad**
 ```
 h1
-
   padding: 0
   margin: 0
 h2
-
   color: #846383
   margin-bottom: 20px
 ```
