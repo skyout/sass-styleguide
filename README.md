@@ -6,25 +6,27 @@ Grasshopper SASS Style Guide
 Table of Contents
 -----------------
     
-1. General Principles
-2. Formatting
-3. Naming
-4. Mixins
-5. Variables
-6. Comments
+1. [General Principles](#general)
+2. [Formatting](#formatting)
+3. [Naming](#naming)
+4. [Mixins](#mixins)
+5. [Variables](#variables)
+6. [Comments](#comments)
 
 
 
-General Principles
+<a name="general">General Principles</a>
 -----------
 
-### Consistency
+Make sure there is plenty of space around all of your selectors and comments to maintain readability. Any files that you will be including should be prefixed with an underscore `_` so that the easily found at the top of a folder. Alignment is also key to keeping a file readable, so ensure that all selectors and properties are properly indented. 
 
 **Be consistent.** If you’re editing code, take a few minutes to look at the code around you and determine its style. If they use spaces around all their arithmetic operators, you should too. If their comments have little boxes of hash marks around them, make your comments have little boxes of hash marks around them too.
 
 The point of having style guidelines is to have a common vocabulary of coding so people can concentrate on what you’re saying rather than on how you’re saying it. If code you add to a file looks drastically different from the existing code around it, it throws readers out of their rhythm when they go to read it. Avoid this.
 
-Formatting
+
+
+<a name="formatting">Formatting</a>
 ----------
 
 SASS should be developed using the `SASS` indentation only style not the SCSS bracket based style. 
@@ -77,9 +79,6 @@ h1
     width: 200px
 ```
 
-
-
-
 ### Chaining
 
 When possible, if multiple methods have the same styles or very similar styles then chain them together using commas. If two selectors have very similar styles with one or two differences, then chain them together with the first selector's styles, then after set the minor changes to the second selector. 
@@ -113,9 +112,6 @@ ul
     color: #666
 ```
 
-
-
-
 ### Nesting
 
 Nesting should only be used when absolutely necessary. Direct descendents also should be used sparingly due to the performance hit that comes with their use. Nesting should be four spaces, and any selectors should have a line break before them.
@@ -147,7 +143,7 @@ h1
 ```
     
     
-Classes, pseduo-classes, and other modifiers should nest inside their selector to maintain readability. The same rules with a line break above apply to these modifiers. 
+Classes, pseduo-classes, and other modifiers should nest inside their selector to maintain readability. The same rules with a line break above apply to these modifiers. Pseduo-class modifiers should go as close to their parent selector as possible. This allows developers to quick see any hover or other states without having to find them later in the file. Class modifies should also go near their selector whenever possible.  
 
 
 **Bad**
@@ -170,6 +166,37 @@ h1
         padding-top: 0
         
 ```
+
+Global styles for elements and very common classes should be placed near the top of the global stylesheet. This can include things like body, link, input, paragraph, and header styles. 
+
+```
+@charset "UTF-8"
+
+body
+    border-top: 3px solid #333
+
+a
+    color: #008fc5
+    cursor: pointer
+    outline: none
+    text-decoration: none
+
+input
+    border: 1px solid #ccc
+    
+h1
+    font-size: $font-size + 10
+    
+p
+    color: #666
+    line-height: 1.5
+    
+        
+// rest of the file
+```
+    
+
+
 
 ### Shorthand Properties
 
@@ -244,7 +271,7 @@ input[type="search"]
 
 
 
-Naming
+<a name="naming">Naming</a>
 ------
 
 
@@ -277,6 +304,7 @@ ul
 
 
 ### IDs and Classes
+
 Use meaningful or generic ID and class names. Instead of presentational or cryptic names, always use ID and class names that reflect the purpose of the element in question, or that are otherwise generic. Names that are specific and reflect the purpose of the element should be preferred as these are most understandable and the least likely to change. Generic names are simply a fallback for elements that have no particular or no meaning different from their siblings. They are typically needed as “helpers”. Using functional or generic names reduces the probability of unnecessary document or template changes.
 
 
@@ -334,7 +362,7 @@ Separate words in ID and class names by a hyphen. Do not concatenate words and a
 #video-id, .error-message
 ```
 
-Imports and Charset
+<a name="imports">Imports and Charset</a>
 ------------------
 
 SASS imports and charset declarations should always be at the top of each SASS file. Important are used to include variables, mixins, fonts, and other chunks of code that are reusable. 
@@ -374,7 +402,7 @@ SASS imports and charset declarations should always be at the top of each SASS f
 
 
 
-Mixins
+<a name="mixins">Mixins</a>
 ------
 
 Mixins are declared using the `@mixin` declaration. Mixins should be housed in a file called `_mixins.sass`. Mixins are used for code that is frequently repeated through the stylesheets, but may not necessarily correspond to a single element or class. 
@@ -402,10 +430,14 @@ Mixins are declared using the `@mixin` declaration. Mixins should be housed in a
     text-align: center
 ```
 
+### Fonts
+
+If outside font files are needed, then a separate font file should be created and named `_fonts.scss`. 
 
 
 
-Variables
+
+<a name="variables">Variables</a>
 ---------
 
 
@@ -445,9 +477,6 @@ $proximaBold: "ProximaNovaBold", sans-serif
 $promixaRegular: "ProximaNovaRegular", sans-serif
 ```
 
-
-
-
 ### Default Values
 
 Each project should have default variables that are associated with it. These include the following: `font-size`, `font-family`, `line-height`. These values should be set to the body in the global stylesheet. 
@@ -476,7 +505,7 @@ p
 ```
 
 
-Comments
+<a name="comments">Comments</a>
 --------
 Well commented code is extremely important. Take time to describe components, how they work, their limitations, and the way they are constructed. Don't leave others in the team guessing as to the purpose of uncommon or non-obvious code.
 
