@@ -438,7 +438,7 @@ If outside font files are needed, then a separate font file should be created an
 
 Variables are declared using the `$` notation. Mixins should be housed in a file called `_variables.sass`. Variables are used for common colors, fonts, and numbers used throughout the stylesheets. 
 
-* Variables should follow camel cased formatting
+* Variables should follow dashed formatting
 * Ensure that variables are not ambiguous and describe the value they hold. 
 * Like Variables should be grouped together to help with context and readability.
 * Comment each variable or group to document the values. 
@@ -458,16 +458,16 @@ $regular: "ProximaNovaRegular", sans-serif
 // good
 
 // error and success colors
-$errorRed: #ea5b54
-$successGreen: #98fe98
+$error-red: #ea5b54
+$success-green: #98fe98
 
 // brand colors
-$primaryGreen: #00853e
-$secondaryBlue: #008fc5
+$primary-green: #00853e
+$secondary-blue: #008fc5
 
 // fonts
-$proximaBold: "ProximaNovaBold", sans-serif
-$promixaRegular: "ProximaNovaRegular", sans-serif
+$proxima-bold: "ProximaNovaBold", sans-serif
+$promixa-regular: "ProximaNovaRegular", sans-serif
 ```
 
 ### Default Values
@@ -476,7 +476,7 @@ Each project should have default variables that are associated with it. These in
 
 ```
 body
-    font: normal #{$font-size}/#{$line-height} $regular
+    font: normal #{$font-size}/#{$line-height} $proxima-regular
 ```
 
 ### Manipulation
