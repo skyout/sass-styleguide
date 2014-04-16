@@ -422,6 +422,8 @@ Mixins are declared using the `@mixin` declaration. Mixins should be housed in a
     text-align: center
 ```
 
+Mixins are encouraged for multiple vendor prefix properties such as box-shadow, transition, transform, gradient, etc. 
+
 ### Fonts
 
 If outside font files are needed, then a separate font file should be created and named `_fonts.scss`. Due some syntax issues, SCSS is acceptable for declaring fonts via `@font-face`. The values assigned in the font-family should be lower case only, dashes if necessary, and then set to a variable in the `_variables.sass` files
