@@ -6,15 +6,15 @@ Grasshopper SASS Style Guide
 Table of Contents
 -----------------
     
-1. General Principles
-1. Mixins
-2. Variables
+1. Consistency
+2. Formatting
+2. Mixins
+3. Variables
 
 
 
-General Principles
-------------------
-
+Consistency
+-----------
 
 ### Consistency
 
@@ -22,6 +22,48 @@ General Principles
 
 The point of having style guidelines is to have a common vocabulary of coding so people can concentrate on what you’re saying rather than on how you’re saying it. If code you add to a file looks drastically different from the existing code around it, it throws readers out of their rhythm when they go to read it. Avoid this.
 
+Formatting
+----------
+
+SASS should be developed using the `SASS` indentation only style not the `SCSS` bracket based style. 
+
+
+
+Imports and Charset
+------------------
+
+SASS imports and charset declarations should always be at the top of each SASS file. Important are used to include variables, mixins, fonts, and other chunks of code that are reusable. 
+
+* `@charset` declaration should always be the first thing. The default charset to be used is UTF-8.
+* Variables, fonts, and then mixin declarations should then immediately follow. 
+* If the file needs a reset or normalize, that should then follow next. 
+* Comments should also be used to describe any other mixins that are not the standard `_variables`, `_fonts`, `_mixins`, or `_reset`
+* File extenions should only be used if the extension is not the default `.sass`
+
+**Good**
+```
+@charset "UTF-8"
+
+@import "_variables"
+@import "_fonts.scss"
+@import "_mixins"
+@import "_reset"
+
+// global tooltip styles
+@import "_tips"
+```
+
+**Bad**
+```
+// imports
+@import "_mixins.sass"
+@import "_fonts.scss"
+@import "_variables.sass"
+@import "_reset.sass"
+@import "_tips.sass"
+
+@charset "UTF-8"
+```
 
 
 
@@ -73,7 +115,6 @@ $successGreen: #98fe98
 // brand colors
 $primaryGreen: #00853e
 $secondaryBlue: #008fc5
-
 
 // fonts
 $proximaBold: "ProximaNovaBold", sans-serif
