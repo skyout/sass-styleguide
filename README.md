@@ -1,7 +1,7 @@
 Grasshopper SASS Style Guide
 ============================
 
-*A guide to developing stylesheets in sass*
+*A guide to developing stylesheets in SASS*
 
 Table of Contents
 -----------------
@@ -22,7 +22,7 @@ Mixins are declared using the `@mixin` declaration. Mixins are used for code tha
 * Mixins should be order alphabetically by their title for organization
 * If applicable, provide default settings in the mixin.
 
-** Good **
+**Good**
 
 ```
 @mixin button($color: $blue)
@@ -31,7 +31,7 @@ Mixins are declared using the `@mixin` declaration. Mixins are used for code tha
     text-align: center
 ```
 
-** Bad **
+**Bad**
 
 ```
 @mixin button($color)
