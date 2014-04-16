@@ -8,8 +8,9 @@ Table of Contents
     
 1. General Principles
 2. Formatting
-3. Mixins
-4. Variables
+3. Naming
+4. Mixins
+5. Variables
 
 
 
