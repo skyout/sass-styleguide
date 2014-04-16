@@ -35,18 +35,18 @@ SASS should be developed using the `SASS` indentation only style not the SCSS br
 
 Indentation should be **four spaces**. If using tabs in a code editor, ensure that the tab are set to four spaces. Each selector should have at least one line break above. This helps to separate selectors and ideas. Properties should immediately follow the selector without a line break, which will aide in putting context to the properties. Remove any trailing whitespaces. Trailing whitespaces are unnecessary and can complicate diffs.
 
-**Bad**
+
 ```sass
+
+// bad
 h1
   padding: 0
   margin: 0
 h2
   color: #846383
   margin-bottom: 20px
-```
 
-**Good**
-```
+// good
 h1
     margin: 0
     padding: 0
@@ -62,7 +62,7 @@ All properties should be on their own line. Properties should be ordered alphabe
 
 
 **Bad**
-```
+```sass
 h1
     padding: 5px
     @include clear
@@ -71,7 +71,7 @@ h1
 ```
 
 **Good**
-```
+```sass
 h1
     @include clear
     color: #000
@@ -86,7 +86,7 @@ When possible, if multiple methods have the same styles or very similar styles t
 
 
 **Bad**
-```
+```sass
 ol
     color: #000
     line-height: 1.5
@@ -101,7 +101,7 @@ ul
 ```
 
 **Good**
-```
+```sass
 ol, ul
     color: #000
     line-height: 1.5
