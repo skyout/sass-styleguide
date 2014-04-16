@@ -1,7 +1,7 @@
 Grasshopper SASS Style Guide
 ============================
 
-*A guide to developing extensible stylesheets in SASS*
+*A guide to developing robust stylesheets in SASS*
 
 Table of Contents
 -----------------
