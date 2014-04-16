@@ -481,3 +481,42 @@ Comments
 Well commented code is extremely important. Take time to describe components, how they work, their limitations, and the way they are constructed. Don't leave others in the team guessing as to the purpose of uncommon or non-obvious code.
 
 Comment style should be simple and consistent within a single code base.
+
+* Place comments on a new line directly above their subject
+* Align comments with the selectors they pertain to
+* Use terse comments that convey ideas
+* Comment major code ideas
+* Comments on every selector is unnecessary
+
+**Bad**
+```
+// too far away
+
+h1
+    color: #000
+    
+
+/*
+    Improper use
+    of the multiline
+*/
+
+section
+    padding: 0
+```
+
+
+**Good**
+
+```
+// basic comment
+h1
+    color: #000
+
+// Block of comments that
+// pertain to the section
+// below and other things
+// and maintain spacing
+section
+    padding: 0
+```
