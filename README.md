@@ -486,7 +486,7 @@ $proxima-regular: "proxima-nova-regular", sans-serif
 
 Each project should have default variables that are associated with it. These include the following: `font-size`, `font-family`, `line-height`. These values should be set to the body in the global stylesheet. 
 
-```
+```sass
 body
     font: normal #{$font-size}/#{$line-height} $proxima-regular
 ```
