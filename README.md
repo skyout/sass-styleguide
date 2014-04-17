@@ -546,3 +546,9 @@ h1
 section
     padding: 0
 ```
+
+
+Thanks
+======
+
+Thanks to https://github.com/isellsoap/css-sass-style-guide for general ideas and veribage. 
