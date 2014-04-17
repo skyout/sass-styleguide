@@ -111,7 +111,7 @@ ul
 
 ### Nesting
 
-Nesting should only be used when absolutely necessary. Direct descendents also should be used sparingly due to the performance hit that comes with their use. Nesting should be four spaces, and any selectors should have a line break before them.
+Element selector nesting should only be used when necessary. Direct descendents also should be used sparingly due to the performance hit that comes with their use. Nesting should be four spaces, and any selectors should have a line break before them.
 
 
 ```sass
