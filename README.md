@@ -29,7 +29,7 @@ The point of having style guidelines is to have a common vocabulary of coding so
 <a name="formatting">Formatting</a>
 ----------
 
-SASS should be developed using the `SASS` indentation only style not the SCSS bracket based style. The only exception here is the the `_fonts.scss` due to a font stacking issue in SASS.
+SASS should be developed using the `SASS` indentation only style not the SCSS bracket based style. The only exception is `_fonts.scss`, due to a font stacking issue in SASS.
 
 ### Spacing and Indentation
 
