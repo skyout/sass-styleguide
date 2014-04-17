@@ -400,8 +400,8 @@ SASS imports and charset declarations should always be at the top of each SASS f
 
 Mixins are declared using the `@mixin` declaration. Mixins should be housed in a file called `_mixins.sass`. Mixins are used for code that is frequently repeated through the stylesheets, but may not necessarily correspond to a single element or class. 
 
-* Mixins should follow camel cased formatting
-* Mixins should be order alphabetically by their title for organization
+* Mixin names should follow dashed, lowercase formatting.
+* Mixins should be order alphabetically by their title for organization.
 * If applicable, provide default settings in the mixin.
 
 
