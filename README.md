@@ -492,7 +492,7 @@ body
 
 ### Manipulation
 
-When manipulating a sizing variable in a stylesheet, use +/- modifiers instead of a fixed value. This allows for simple global font changes in the future. 
+When manipulating a sizing variable in a stylesheet, use +/- modifiers instead of a fixed value. This allows for simple global font changes in the future. Any arithmetic operators should have a space before and after.  
 
 ```sass
 // bad
