@@ -428,16 +428,12 @@ If outside font files are needed, then a separate font file should be created an
 
 ```sass
 // proxima nova light
-@font-face{
+@font-face
     font-family: 'proxima-nova-light';
     src: url('/assets/css/fonts/ProximaNovaLight/ProximaNova-Light-webfont.eot');
-    src: url('/assets/css/fonts/ProximaNovaLight/ProximaNova-Light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/assets/css/fonts/ProximaNovaLight/ProximaNova-Light-webfont.woff') format('woff'),
-         url('/assets/css/fonts/ProximaNovaLight/ProximaNova-Light-webfont.ttf') format('truetype'),
-         url('/assets/css/fonts/ProximaNovaLight/ProximaNova-Light-webfont.svg#proxima_nova_ltlight') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+    src: url('/assets/css/fonts/ProximaNovaLight/ProximaNova-Light-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/css/fonts/ProximaNovaLight/ProximaNova-Light-webfont.woff') format('woff'), url('/assets/css/fonts/ProximaNovaLight/ProximaNova-Light-webfont.ttf') format('truetype'), url('/assets/css/fonts/ProximaNovaLight/ProximaNova-Light-webfont.svg#proxima_nova_ltlight') format('svg');
+    font-weight: normal
+    font-style: normal
 ```
 
 
