@@ -155,12 +155,11 @@ h1:first-child
 // good
 h1
 
-    &.green
-        color: #0085e3
-        
     &:first-child
         padding-top: 0
-        
+
+    &.green
+        color: #0085e3
 ```
 
 Global styles for elements and very common classes should be placed near the top of the global stylesheet. This can include things like body, link, input, paragraph, and header styles. 
