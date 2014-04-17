@@ -204,7 +204,6 @@ CSS offers a variety of shorthand properties (like font) that should be used whe
 body
     font-family: Arial, Helvetica, sans-serif
     font-size: 14px
-    font-style: italic
     font-weight: normal
     line-height: 1.5
 
