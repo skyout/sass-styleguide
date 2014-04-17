@@ -33,7 +33,7 @@ SASS should be developed using the `SASS` indentation only style not the SCSS br
 
 ### Spacing and Indentation
 
-Indentation should be **four spaces**. If using tabs in a code editor, ensure that the tab are set to four spaces. Each selector should have at least one line break above. This helps to separate selectors and ideas. Properties should immediately follow the selector without a line break, which will aide in putting context to the properties. Remove any trailing whitespaces. Trailing whitespaces are unnecessary and can complicate diffs.
+Indentation should be **four spaces**. If using tabs in a code editor, ensure that tabs are set to four spaces. Each selector should have at least one line break above, this helps to separate selectors and ideas. Properties should immediately follow the selector without a line break, which will aide in putting context to the properties. Remove any trailing whitespaces. Trailing whitespaces are unnecessary and can complicate diffs.
 
 
 ```sass
