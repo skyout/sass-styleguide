@@ -269,7 +269,7 @@ input[type="search"]
 
 ### Case
 
-**Use only lowercase**. This applies to selectors, properties, and property values. 
+**Use only lowercase**. This applies to selectors, properties, and property values.
 
 ```sass
 // bad
@@ -424,15 +424,27 @@ Mixins are encouraged for multiple vendor prefix properties such as box-shadow, 
 
 ### Fonts
 
-If outside font files are needed, then a separate font file should be created and named `_fonts.scss`. Due some syntax issues, SCSS is acceptable for declaring fonts via `@font-face`. The values assigned in the font-family should be lower case only, dashes if necessary, and then set to a variable in the `_variables.sass` files
+If outside font files are needed, then a separate font file should be created and named `_fonts.sass`. Multiple styles and weights of a font that are used should be set in the `_fonts.sass` file to enable easy use of the font in stylesheets. 
 
 ```sass
-// proxima nova light
+// proxima nova
 @font-face
-    font-family: 'proxima-nova-light'
-    src: url('/fonts/ProximaNovaLight/ProximaNova-Light-webfont.eot')
-    src: url('/fonts/ProximaNovaLight/ProximaNova-Light-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/ProximaNovaLight/ProximaNova-Light-webfont.woff') format('woff'), url('/fonts/ProximaNovaLight/ProximaNova-Light-webfont.ttf') format('truetype'), url('/fonts/ProximaNovaLight/ProximaNova-Light-webfont.svg#proxima_nova_ltlight') format('svg')
+    font-family: 'proxima-nova'
+    src: url('/fonts/ProximaNovaRegular/ProximaNova-Reg-webfont.eot')
+    src: url('/fonts/ProximaNovaRegular/ProximaNova-Reg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/ProximaNovaRegular/ProximaNova-Reg-webfont.svg#proxima_nova_rgregular') format('svg'),
+         url('/fonts/ProximaNovaRegular/ProximaNova-Reg-webfont.woff') format('woff'),
+         url('/fonts/ProximaNovaRegular/ProximaNova-Reg-webfont.ttf') format('truetype')
     font-weight: normal
+    font-style: normal
+    
+font-family: 'proxima-nova'
+    src: url('/fonts/ProximaNovaBold/ProximaNova-Bold-webfont.eot')
+    src: url('/fonts/ProximaNovaBold/ProximaNova-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/ProximaNovaBold/ProximaNova-Bold-webfont.svg#proxima_nova_rgbold') format('svg'),
+         url('/fonts/ProximaNovaBold/ProximaNova-Bold-webfont.woff') format('woff'),
+         url('/fonts/ProximaNovaBold/ProximaNova-Bold-webfont.ttf') format('truetype')
+    font-weight: 700
     font-style: normal
 ```
 
@@ -457,9 +469,6 @@ $red: #ea5b54
 $green: #98fe98
 $primary: #00853e
 $secondary: #008fc5
-$bold: "proxima-nova-bold", sans-serif
-$regular: "proxima-nova-regular", sans-serif
-
 
 // good
 
@@ -470,10 +479,6 @@ $success-green: #98fe98
 // brand colors
 $primary-green: #00853e
 $secondary-blue: #008fc5
-
-// fonts
-$proxima-bold: "proxima-nova-bold", sans-serif
-$proxima-regular: "proxima-nova-regular", sans-serif
 ```
 
 ### Default Values
@@ -482,7 +487,7 @@ Each project should have default variables that are associated with it. These in
 
 ```sass
 body
-    font: normal #{$font-size}/#{$line-height} $proxima-regular
+    font: normal #{$font-size}/#{$line-height} proxima-nova
 ```
 
 ### Manipulation
