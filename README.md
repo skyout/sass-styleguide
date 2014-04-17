@@ -453,7 +453,7 @@ Variables are declared using the `$` notation. Mixins should be housed in a file
 
 * Variables should follow dashed formatting
 * Ensure that variables are not ambiguous and describe the value they hold. 
-* Like Variables should be grouped together to help with context and readability.
+* Like variables should be grouped together to help with context and readability.
 * Comment each variable or group to document the values. 
 
 ```sass
@@ -508,12 +508,12 @@ Well commented code is extremely important. Take time to describe components, ho
 
 Comment style should be simple and consistent within a single code base.
 
-* Place comments on a new line directly above their subject
-* Comments should have a space directly after the `//`
-* Align comments with the selectors they pertain to
-* Use terse comments that convey ideas
-* Comment major code ideas
-* Comments on every selector is unnecessary
+* Place comments on a new line directly above their subject.
+* Comments should have a space directly after the `//`.
+* Align comments with the selectors they pertain to.
+* Use terse comments that convey ideas.
+* Comment major code ideas.
+* Comments on every selector is unnecessary.
 
 ```sass
 // bad
