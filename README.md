@@ -431,19 +431,13 @@ If outside font files are needed, then a separate font file should be created an
 @font-face
     font-family: 'proxima-nova'
     src: url('/fonts/ProximaNovaRegular/ProximaNova-Reg-webfont.eot')
-    src: url('/fonts/ProximaNovaRegular/ProximaNova-Reg-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/ProximaNovaRegular/ProximaNova-Reg-webfont.svg#proxima_nova_rgregular') format('svg'),
-         url('/fonts/ProximaNovaRegular/ProximaNova-Reg-webfont.woff') format('woff'),
-         url('/fonts/ProximaNovaRegular/ProximaNova-Reg-webfont.ttf') format('truetype')
+    src: url('/fonts/ProximaNovaRegular/ProximaNova-Reg-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/ProximaNovaRegular/ProximaNova-Reg-webfont.svg#proxima_nova_rgregular') format('svg'), url('/fonts/ProximaNovaRegular/ProximaNova-Reg-webfont.woff') format('woff'), url('/fonts/ProximaNovaRegular/ProximaNova-Reg-webfont.ttf') format('truetype')
     font-weight: normal
     font-style: normal
     
 font-family: 'proxima-nova'
     src: url('/fonts/ProximaNovaBold/ProximaNova-Bold-webfont.eot')
-    src: url('/fonts/ProximaNovaBold/ProximaNova-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/ProximaNovaBold/ProximaNova-Bold-webfont.svg#proxima_nova_rgbold') format('svg'),
-         url('/fonts/ProximaNovaBold/ProximaNova-Bold-webfont.woff') format('woff'),
-         url('/fonts/ProximaNovaBold/ProximaNova-Bold-webfont.ttf') format('truetype')
+    src: url('/fonts/ProximaNovaBold/ProximaNova-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/ProximaNovaBold/ProximaNova-Bold-webfont.svg#proxima_nova_rgbold') format('svg'), url('/fonts/ProximaNovaBold/ProximaNova-Bold-webfont.woff') format('woff'), url('/fonts/ProximaNovaBold/ProximaNova-Bold-webfont.ttf') format('truetype')
     font-weight: 700
     font-style: normal
 ```
