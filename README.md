@@ -551,4 +551,4 @@ section
 Thanks
 ======
 
-Thanks to [CSS/Sass style guide](https://github.com/isellsoap/css-sass-style-guide) for an outline of ideas and veribage expressing concepts. 
+Thanks to [CSS/Sass style guide](https://github.com/isellsoap/css-sass-style-guide) for an outline of ideas and veribage for expressing concepts. 
