@@ -481,7 +481,7 @@ Each project should have default variables that are associated with it. These in
 
 ```sass
 body
-    font: normal #{$font-size}/#{$line-height} "proxima-nova"
+    font: normal #{$font-size}/#{$line-height} "proxima-nova", sans-serif
 ```
 
 ### Manipulation
