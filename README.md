@@ -81,7 +81,7 @@ h1
 
 ### Chaining
 
-When possible, if multiple methods have the same styles or very similar styles then chain them together using commas. If two selectors have very similar styles with one or two differences, then chain them together with the first selector's styles, then after set the minor changes to the second selector. 
+When possible, if multiple methods have the same styles or very similar styles then chain them together using commas. If two selectors have very similar styles with one or two differences, chain them together with the first selector's styles, then after set the minor changes to the second selector. 
 
 ```sass
 // bad
