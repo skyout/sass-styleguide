@@ -424,7 +424,7 @@ Mixins are encouraged for multiple vendor prefix properties such as box-shadow, 
 
 ### Fonts
 
-If outside font files are needed, then a separate font file should be created and named `_fonts.sass`. Multiple styles and weights of a font that are used should be set in the `_fonts.sass` file to enable easy use of the font in stylesheets. 
+If outside font files are needed, then a separate font file should be created and named `_fonts.sass`. Multiple styles and weights of a font should be set using `@font-face`, but should all have the same font family name. Ensure when declaring the font to provide backup font styles.  
 
 ```sass
 // proxima nova
