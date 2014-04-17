@@ -12,6 +12,7 @@ Table of Contents
 4. [Mixins](#mixins)
 5. [Variables](#variables)
 6. [Comments](#comments)
+7. [Thanks](#thanks)
 
 
 
@@ -548,7 +549,7 @@ section
 ```
 
 
-Thanks
+<a name="thanks">Thanks</a>
 ======
 
 Thanks to [CSS/Sass style guide](https://github.com/isellsoap/css-sass-style-guide) for an outline of ideas and veribage for expressing concepts. 
