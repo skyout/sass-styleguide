@@ -19,7 +19,7 @@ Table of Contents
 <a name="general">General Principles</a>
 -----------
 
-Make sure there is plenty of space around all of your selectors and comments to maintain readability. Alignment is also key to keeping a file readable, so ensure that all selectors and properties are properly indented. Any files that you will be including should be prefixed with an underscore `_` so that the easily found at the top of a folder.
+Make sure there is plenty of space around all of your selectors and comments to maintain readability. Alignment is also key to keeping a file readable, so ensure that all selectors and properties are properly indented. Any files that you will be including should be prefixed with an underscore `_` so that they are easily found at the top of a folder.
 
 **Be consistent.** If you’re editing code, take a few minutes to look at the code around you and determine its style. If they use spaces around all their arithmetic operators, you should too. If their comments have little boxes of hash marks around them, make your comments have little boxes of hash marks around them too.
 
