@@ -200,21 +200,33 @@ p
 
 ### Shorthand Properties
 
-CSS offers a variety of shorthand properties (like font) that should be used whenever possible, even in cases where only one value is explicitly set. Using shorthand properties is useful for code efficiency and understandability.
+CSS offers a variety of shorthand properties (like font) that should be used whenever possible, even in cases where only one value is explicitly set. Using shorthand properties is useful for code efficiency and understandability. If two or fewer properties are changing, then the use of non-shorthand properties is acceptable. 
 
 
 ```sass
 // bad
 body
+    background-attachment: fixed
+    background-color: #eee
+    background-image: url(/img/pic.jpg)
+    background-position: left top
+    background-repeat: no-repeat
     font-family: Arial, Helvetica, sans-serif
     font-size: 14px
     font-weight: normal
     line-height: 1.5
-
-
+    
 // good
 body
+    background: #eee url("img/pic.jpg) no-repeat scroll left top
     font: normal 14px/1.5 Arial, Helvetica, sans-serif
+```
+
+Shorthand values for the `background` and `font` properties should be ordered as follows:
+
+```sass
+background: color image repeat attachment position (left, top)
+font: font-style font-variant font-weight font-size/line-height font-family
 ```
 
 
