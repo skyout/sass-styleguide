@@ -112,7 +112,11 @@ ul
 
 ### Nesting
 
-Element selector nesting should only be used when necessary. Direct descendents also should be used sparingly due to the performance hit that comes with their use. Nesting should be four spaces, and any selectors should have a line break before them.
+Element selector nesting should only be used when necessary. Direct descendents also should be used sparingly due to the performance hit that comes with their use. Nesting can cause unecessarily large file sizes when a lot of nesting occurs. 
+
+Descendant selectors are inefficient because, for each element that matches the key, the browser must also traverse up the DOM tree, evaluating every ancestor element until it finds a match or reaches the root element. The less specific the key, the greater the number of nodes that need to be evaluated. 
+
+Nesting should be four spaces, and any selectors should have a line break before them.
 
 
 ```sass
@@ -233,7 +237,7 @@ p
     line-height: 1.5
 ```
 
-Shorthand values should be used for `padding`, `margin`, and `border` if more than one value is going to be set.
+Shorthand values should be used for `padding`, `margin`, and `border` if **more than one** value is going to be set.
 
 ```sass
 // bad
