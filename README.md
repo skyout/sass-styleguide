@@ -233,7 +233,19 @@ p
     line-height: 1.5
 ```
 
+Shorthand values should be used for `padding`, `margin`, and `border` if more than one value is going to be set.
 
+```sass
+// bad
+p
+    padding-left: 20px
+    padding-top: 15px
+    
+
+// good
+p
+    padding: 15px 0 0 20px
+```
 
 
 ### Quotation marks
