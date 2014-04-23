@@ -221,7 +221,7 @@ body
     
 // good
 body
-    background: #eee url("img/pic.jpg) no-repeat scroll left top
+    background: #eee url("img/pic.jpg") no-repeat scroll left top
     font: normal 14px/1.5 Arial, Helvetica, sans-serif
     list-style: disc outside none
 ```
@@ -230,7 +230,7 @@ Shorthand values for the `background`, `font`, and `list` properties should be o
 
 ```sass
 background: color image repeat attachment position (left, top)
-// background: #eee url("img/pic.jpg) no-repeat scroll left top
+// background: #eee url("img/pic.jpg") no-repeat scroll left top
 
 font: font-style font-variant font-weight font-size/line-height font-family
 // font: normal 14px/1.5 Arial, Helvetica, sans-serif
