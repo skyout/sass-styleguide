@@ -214,7 +214,7 @@ font: font-style font-weight font-variant font-size/line-height font-family
 
 Any subsequent modifications to that font tag should be done in multi-line declaration, *unless* there is a change to the `font-family`, then the full declaration is required. This will keep a single font for a document and promotes proper cascading. 
 
-`Font-weight` should always be declared using numbers instead of keywords. This aids in use of `@font-face` declarations. 
+`Font-weight` should always be declared using numbers instead of keywords. This aids in use of `@font-face` declarations. `Line-height` should always be declared using `em`, however without the unit. 
 
 **Background**
 
@@ -225,7 +225,7 @@ background: color image repeat attachment position(left, top) size clip attachme
 // background: #eee url("img/pic.jpg") no-repeat scroll left top auto padding-box border-box 
 ```
 
-Like font, Any subsequent modifications to that font tag should be done in multi-line declaration, *unless* there is a change to the `url()`, then the full declaration is required. One exception to this is if there original declaration only sets a color then the following shorthand is acceptable. 
+Like font, Any subsequent modifications to that font tag should be done in multi-line declaration, *unless* there is a change to the `url()`, then the full declaration is required. One exception to this is if there original declaration only sets a color then the single `background: color` shorthand is acceptable. 
 
 ```sass
 background: #fff
@@ -243,7 +243,7 @@ list-style: list-style-type list-style-position list-style-image
 
 ### Shorthand Values
 
-Omit unit specification after “0” values unless they are required. For color values that permit it, 3 character hexadecimal notation is shorter and more succinct. As a general rule, if a unit specification isn't required, then don't use it. 
+Omit unit specification after `0` values unless they are required. For color values that permit it, 3 character hexadecimal notation is shorter and more succinct. As a general rule, if a unit specification isn't required, then don't use it.
 
 ```sass
 // bad
@@ -259,6 +259,8 @@ p
     padding: 0
     line-height: 1.5
 ```
+
+
 
 Shorthand values should be used for `padding`, `margin`, and `border` if **more than one** value is going to be set.
 
