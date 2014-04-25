@@ -522,7 +522,7 @@ font-family: 'proxima-nova'
 
 ### Declaration
 
-Variables are declared using the `$` notation. Mixins should be housed in a file called `_variables.sass`. Variables are used for common colors, fonts, and numbers used throughout the stylesheets. 
+Variables are declared using the `$` notation. Variables should be housed in a file called `_variables.sass`. Variables are used for common colors, fonts, and numbers used throughout the stylesheets. 
 
 * Variables should follow dashed formatting
 * Ensure that variables are not ambiguous and describe the value they hold. 
