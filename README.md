@@ -214,6 +214,8 @@ font: font-style font-weight font-variant font-size/line-height font-family
 
 Any subsequent modifications to that font tag should be done in multi-line declaration, *unless* there is a change to the `font-family`, then the full declaration is required. This keep a single font for a document or section and allows proper cascading. 
 
+`Font-weight` should always be declared using numbers instead of keywords. This aids in use of `@font-face` declarations. 
+
 **Background**
 
 `background` should be declared using the single-line declaration the first time.
@@ -270,12 +272,43 @@ p
 // good
 p
     padding: 15px 0 0 20px
+    
+```
+
+For `padding`, `margin`, and `border`, 1 2 or 4 values are acceptable. Leaving off single values can cause ambiguous code and lead to difficult comprehending. 
+
+```sass
+// bad
+p
+    padding: 0 20px 10px
+
+
+// good
+p
+    padding: 0
+    
+q
+    padding: 0 20px
+
+time
+    padding: 10px 20px 15px 5px
+
+```
+
+Similarly when declaring `box-shadow` and `text-shadow` ambigiously leaving off values is bad form. Always declare all values of these
+
+```sass
+box-shadow: inset 3px 3px 1px 0 rgba(0,0,0,0.3)
+// box-shadow: none h-shadow v-shadow blur spread color 
+
+text-shadow: 1px 1px 1px rgba(0,0,0,0.5)
+//text-shadow: h-shadow v-shadow blur color
 ```
 
 
 ### Quotation marks
 
-Use double `"` rather than single `'` quotation marks for attribute selectors or property values. Also don’t forget to quote attribute values in selectors.
+Use double `"` rather than single `'` quotation marks for attribute selectors or property values. Also don’t forget to quote attribute values in selectors. Exceptions can be made for values that require use of quotes inside the property value, such as the `content` or `quote`. 
 
 ```sass
 // bad
@@ -307,7 +340,7 @@ input[type="search"]
 
 ### Case
 
-**Use only lowercase**. This applies to selectors, properties, and property values. The only exception here is if a font is named with an uppercase character. 
+**Use only lowercase**. This applies to selectors, properties, and property values. Exceptions are for any strings inside css property values, such as `content`. 
 
 ```sass
 // bad
@@ -493,6 +526,7 @@ Variables are declared using the `$` notation. Mixins should be housed in a file
 * Ensure that variables are not ambiguous and describe the value they hold. 
 * Like variables should be grouped together to help with context and readability.
 * Comment each variable or group to document the values. 
+* Inheritance of colors should be used whenever possible
 
 ```sass
 // bad
@@ -509,8 +543,8 @@ $error-red: #ea5b54
 $success-green: #98fe98
 
 // brand colors
-$primary-green: #00853e
-$secondary-blue: #008fc5
+$brand-primary-color: #00853e
+$brand-secondary-color: #008fc5
 ```
 
 ### Default Values
@@ -524,7 +558,7 @@ body
 
 ### Manipulation
 
-When manipulating a sizing variable in a stylesheet, use +/- modifiers instead of a fixed value. This allows for simple global font changes in the future. Any arithmetic operators should have a space before and after.  
+When manipulating a sizing variable in a stylesheet, use relative `*` modifiers instead of a fixed value. This allows for simple global font changes in the future, as well as simple font scaling for responsive designs. Any arithmetic operators should have a space before and after.  
 
 ```sass
 // bad
@@ -535,8 +569,8 @@ p
 
 // good
 p
-    font-size: $font-size + 2
-    line-height: $line-height + 0.2
+    font-size: $font-size * 1.15
+    line-height: $line-height * 1.2
 ```
 
 
