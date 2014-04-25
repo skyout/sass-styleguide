@@ -205,7 +205,7 @@ CSS offers a variety of shorthand properties (like `font`, `background`, `list-s
 
 **Font**
 
-`font` should be declared on the body tag with the full single line declaration as follows: 
+`font` should be declared on the body tag with the full single-line declaration as follows: 
 
 ```sass
 font: font-style font-weight font-variant font-size/line-height font-family
@@ -219,8 +219,8 @@ Any subsequent modifications to that font tag should be done in multi-line decla
 `background` should be declared using the single-line declaration the first time.
 
 ```sass
-background: color image repeat attachment position (left, top)
-// background: #eee url("img/pic.jpg") no-repeat scroll left top
+background: color image repeat attachment position(left, top) size clip attachment
+// background: #eee url("img/pic.jpg") no-repeat scroll left top auto padding-box border-box 
 ```
 
 Like font, Any subsequent modifications to that font tag should be done in multi-line declaration, *unless* there is a change to the `url()`, then the full declaration is required. One exception to this is if there original declaration only sets a color then the following shorthand is acceptable. 
@@ -231,7 +231,7 @@ background: #fff
 
 **List Style**
 
-Like the two preceding attributes, `list-style` should be declared initially using the single-line declaration the first time. Any subsequent modifications to that font tag should be done in multi-line declaration, *unless* there is a change to the `url()`, then the full declaration is required.
+Like the two preceding properties, `list-style` should be declared initially using the single-line declaration the first time. Any subsequent modifications to that font tag should be done in multi-line declaration, *unless* there is a change to the `url()`, then the full declaration is required.
 
 ```sass
 list-style: list-style-type list-style-position list-style-image
