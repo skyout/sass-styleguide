@@ -217,7 +217,7 @@ body
     line-height: 1.5
     list-style-type: disc
     list-style-position: outside
-    list-style-image: nonone
+    list-style-image: none
     
 // good
 body
