@@ -212,7 +212,7 @@ font: font-style font-weight font-variant font-size/line-height font-family
 // font: normal normal normal 14px/1.5 Arial, Helvetica, sans-serif
 ```
 
-Any subsequent modifications to that font tag should be done in multi-line declaration, *unless* there is a change to the `font-family`, then the full declaration is required. This keep a single font for a document or section and allows proper cascading. 
+Any subsequent modifications to that font tag should be done in multi-line declaration, *unless* there is a change to the `font-family`, then the full declaration is required. This will keep a single font for a document and promotes proper cascading. 
 
 `Font-weight` should always be declared using numbers instead of keywords. This aids in use of `@font-face` declarations. 
 
