@@ -297,7 +297,7 @@ time
 
 ```
 
-Similarly when declaring `box-shadow` and `text-shadow` ambigiously leaving off values is bad form. Always declare all values of these
+Similarly when declaring `box-shadow` and `text-shadow` ambigiously leaving off values is bad form. Always declare all values of these properties. However, mixins are encourage for these due to vendor prefixes. 
 
 ```sass
 box-shadow: inset 3px 3px 1px 0 rgba(0,0,0,0.3)
