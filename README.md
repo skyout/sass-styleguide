@@ -200,41 +200,40 @@ p
 
 ### Shorthand Properties
 
-CSS offers a variety of shorthand properties (like font) that should be used whenever possible, even in cases where only one value is explicitly set. Using shorthand properties is useful for code efficiency and understandability. If two or fewer properties are changing, then the use of non-shorthand properties is acceptable. 
 
+CSS offers a variety of shorthand properties (like `font`, `background`, `list-style`, etc) that should be used during the first declaration. 
+
+**Font**
+
+`font` should be declared on the body tag with the full single line declaration as follows: 
 
 ```sass
-// bad
-body
-    background-attachment: fixed
-    background-color: #eee
-    background-image: url(/img/pic.jpg)
-    background-position: left top
-    background-repeat: no-repeat
-    font-family: Arial, Helvetica, sans-serif
-    font-size: 14px
-    font-weight: normal
-    line-height: 1.5
-    list-style-type: disc
-    list-style-position: outside
-    list-style-image: none
-    
-// good
-body
-    background: #eee url("img/pic.jpg") no-repeat scroll left top
-    font: normal 14px/1.5 Arial, Helvetica, sans-serif
-    list-style: disc outside none
+font: font-style font-weight font-variant font-size/line-height font-family
+// font: normal normal normal 14px/1.5 Arial, Helvetica, sans-serif
 ```
 
-Shorthand values for the `background`, `font`, and `list` properties should be ordered as follows:
+Any subsequent modifications to that font tag should be done in multi-line declaration, *unless* there is a change to the `font-family`, then the full declaration is required. This keep a single font for a document or section and allows proper cascading. 
+
+**Background**
+
+`background` should be declared using the single-line declaration the first time.
 
 ```sass
 background: color image repeat attachment position (left, top)
 // background: #eee url("img/pic.jpg") no-repeat scroll left top
+```
 
-font: font-style font-variant font-weight font-size/line-height font-family
-// font: normal 14px/1.5 Arial, Helvetica, sans-serif
+Like font, Any subsequent modifications to that font tag should be done in multi-line declaration, *unless* there is a change to the `url()`, then the full declaration is required. One exception to this is if there original declaration only sets a color then the following shorthand is acceptable. 
 
+```sass
+background: #fff
+```
+
+**List Style**
+
+Like the two preceding attributes, `list-style` should be declared initially using the single-line declaration the first time. Any subsequent modifications to that font tag should be done in multi-line declaration, *unless* there is a change to the `url()`, then the full declaration is required.
+
+```sass
 list-style: list-style-type list-style-position list-style-image
 // list-style: disc outside none
 ```
