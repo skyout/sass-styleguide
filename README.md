@@ -48,7 +48,7 @@ The point of having style guidelines is to have a common vocabulary of coding so
 
 SASS should be developed using the `SASS` indentation only style not the SCSS bracket based style.
 
-### Spacing and Indentation
+### <a name="spacing">Spacing and Indentation</a>
 
 Indentation should be **four spaces**. If using tabs in a code editor, ensure that tabs are set to four spaces. Each selector should have at least one line break above, this helps to separate selectors and ideas. Properties should immediately follow the selector without a line break, which will aide in putting context to the properties. Remove any trailing whitespaces. Trailing whitespaces are unnecessary and can complicate diffs.
 
@@ -73,7 +73,7 @@ h2
     margin-bottom: 20px
 ```
 
-### Sorting Properties
+### <a name="sorting">Sorting Properties</a>
 
 All properties should be on their own line. Properties should be ordered alphabetically to enable easy lookup. Any includes should go at the top of the propertly list, directly below the selector. Multiple includes should also be ordered alphabetically. 
 
@@ -96,7 +96,7 @@ h1
     width: 200px
 ```
 
-### Chaining
+### <a name="chaining">Chaining</a>
 
 When possible, if multiple methods have the same styles or very similar styles then chain them together using commas. If two selectors have very similar styles with one or two differences, chain them together with the first selector's styles, then after set the minor changes to the second selector. 
 
@@ -126,7 +126,7 @@ ul
     color: #666
 ```
 
-### Nesting
+### <a name="nesting">Nesting</a>
 
 Element selector nesting should only be used when necessary. Direct descendents also should be used sparingly due to the performance hit that comes with their use. Nesting can cause unecessarily large file sizes when a lot of nesting occurs. 
 
@@ -214,7 +214,7 @@ p
 
 
 
-### Shorthand Properties
+### <a name="properties">Shorthand Properties</a>
 
 
 CSS offers a variety of shorthand properties (like `font`, `background`, `list-style`, etc) that should be used during the first declaration. 
@@ -257,7 +257,8 @@ list-style: list-style-type list-style-position list-style-image
 ```
 
 
-### Shorthand Values
+### <a name="values">Shorthand Values</a>
+
 
 Omit unit specification after `0` values unless they are required. For color values that permit it, 3 character hexadecimal notation is shorter and more succinct. As a general rule, if a unit specification isn't required, then don't use it.
 
@@ -324,7 +325,7 @@ text-shadow: 1px 1px 1px rgba(0,0,0,0.5)
 ```
 
 
-### Quotation marks
+### <a name="quotes">Quotation marks</a>
 
 Use double `"` rather than single `'` quotation marks for attribute selectors or property values. Also don’t forget to quote attribute values in selectors. Exceptions can be made for values that require use of quotes inside the property value, such as the `content` or `quote`. 
 
@@ -356,7 +357,7 @@ input[type="search"]
 ------
 
 
-### Case
+### <a name="case">Case</a>
 
 **Use only lowercase**. This applies to selectors, properties, and property values. Exceptions are for any strings inside css property values, such as `content`. 
 
@@ -382,7 +383,7 @@ ul
 
 
 
-### IDs and Classes
+### <a name="ids">IDs and Classes</a>
 
 Use meaningful or generic ID and class names. Instead of presentational or cryptic names, always use ID and class names that reflect the purpose of the element in question, or that are otherwise generic. Names that are specific and reflect the purpose of the element should be preferred as these are most understandable and the least likely to change. Generic names are simply a fallback for elements that have no particular or no meaning different from their siblings. They are typically needed as “helpers”. Using functional or generic names reduces the probability of unnecessary document or template changes.
 
@@ -424,7 +425,7 @@ Use ID and class names that are as short as possible but as long as necessary. T
 #nav, .author
 ```
 
-### Delimiters
+### <a name="delimiters">Delimiters</a>
 
 Separate words in ID and class names by a hyphen. Do not concatenate words and abbreviations in selectors by any characters (including none at all) other than hyphens, in order to improve understanding and scannability.
 
@@ -537,7 +538,7 @@ font-family: 'proxima-nova'
 ---------
 
 
-### Declaration
+### <a name="declaration">Declaration</a>
 
 Variables are declared using the `$` notation. Variables should be housed in a file called `_variables.sass`. Variables are used for common colors, fonts, and numbers used throughout the stylesheets. 
 
@@ -566,7 +567,7 @@ $brand-primary-color: #00853e
 $brand-secondary-color: #008fc5
 ```
 
-### Default Values
+### <a name="defatults">Default Values</a>
 
 Each project should have default variables that are associated with it. These include the following: `font-size`, `font-family`, `line-height`. These values should be set to the body in the global stylesheet. 
 
@@ -575,7 +576,7 @@ body
     font: normal #{$font-size}/#{$line-height} "proxima-nova", sans-serif
 ```
 
-### Manipulation
+### <a name="manipulation">Manipulation</a>
 
 When manipulating a sizing variable in a stylesheet, use relative `*` modifiers instead of a fixed value. This allows for simple global font changes in the future, as well as simple font scaling for responsive designs. Any arithmetic operators should have a space before and after.  
 
