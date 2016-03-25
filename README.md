@@ -8,26 +8,27 @@ Table of Contents
     
 1. [General Principles](#general)
 2. [Formatting](#formatting)
-    - Spacing and Indentation
-    - Sorting Properties
-    - Chaining
-    - Nesting
-    - Shorthand Properties
-    - Shorthand Values
-    - Quotation Marks
+    - [Spacing and Indentation](#spacing)
+    - [Sorting Properties](#sorting)
+    - [Chaining](#chaining)
+    - [Nesting](#nesting)
+    - [Shorthand Properties](#properties)
+    - [Shorthand Values](#values)
+    - [Quotation Marks](#quotes)
 3. [Naming](#naming)
-    - Case
-    - IDs and Classes
-    - Delimiters
+    - [Case](#case)
+    - [IDs and Classes](#ids)
+    - [Delimiters](#delimiters)
 4. [Imports and Charset](#imports)
 5. [Mixins](#mixins)
 6. [Fonts](#fonts)
 7. [Variables](#variables)
-    - Declaration
-    - Default Values
-    - Manipulation
+    - [Declaration](#declaration)
+    - [Default Values](#defaults)
+    - [Manipulation](#manipulation)
 8. [Comments](#comments)
 9. [Thanks](#thanks)
+
 
 
 
