@@ -1,5 +1,5 @@
 SASS Style Guide
-============================
+================
 
 *A guide to developing robust stylesheets in SASS*
 
